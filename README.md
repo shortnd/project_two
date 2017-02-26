@@ -1,4 +1,4 @@
-#### User Stores
+## User Stores
 
 As a user I should be able to register for upcoming regional
 
