@@ -1,6 +1,6 @@
 ## User Stores
 
-As a user I should be able to register for upcoming regional
+As a user I should be able to register for upcoming regional(event)
 
 As an Admin I should be able to see all users who have registered for each regional
 

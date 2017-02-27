@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ProjectTwo</title>
-    <%= csrf_meta_tags %>
+    <head>
+        <title>ProjectTwo</title>
+        <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-  <body>
-    <%= yield %>
-  </body>
+    <body>
+        <div class="container">
+            <header>
+                <h1>LPA District 5</h1>
+            </header>
+            <nav>
+              <ul>
+                <li><%#= link_to "View Events", events_path %></li>
+                <li><%#= link_to "New User" , users_path %></li>
+              </ul>
+            </nav>
+
+            <%= yield %>
+        </div>
+    </body>
 </html>
