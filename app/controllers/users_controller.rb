@@ -4,12 +4,12 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = Users.new
+    @user = User.new
   end
 
   def create
     @user = User.create(user_params)
-    redirect_to users_path(@user)
+    redirect_to users_path
   end
 
   def show

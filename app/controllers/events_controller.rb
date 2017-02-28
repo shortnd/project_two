@@ -2,7 +2,20 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
-    @users = User.all
+  end
+
+  def show
+    @event = Event.find(params[:id])
+  end
+
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    @event.update(event_params)
+    redirect_to @event
   end
 
 end
