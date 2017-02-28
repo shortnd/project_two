@@ -16,18 +16,25 @@ ActiveRecord::Schema.define(version: 20170228151003) do
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.string "event"
+    t.string "season"
     t.string "location"
     t.string "date"
+    t.string "about"
+    t.string "nightOneEvents"
+    t.string "dayTwoEvents"
+    t.string "nightTwoEvents"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "fullName"
-    t.string "email"
-    t.string "password",    null: false
-    t.string "chapter"
-    t.string "address"
-    t.string "phoneNumber"
+    t.string  "fullName"
+    t.string  "email"
+    t.string  "password",    null: false
+    t.string  "chapter"
+    t.string  "address"
+    t.string  "phoneNumber"
+    t.integer "event_id"
+    t.index ["event_id"], name: "index_users_on_event_id", using: :btree
   end
 
+  add_foreign_key "users", "events"
 end

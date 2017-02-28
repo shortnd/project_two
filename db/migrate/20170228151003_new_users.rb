@@ -7,6 +7,7 @@ class NewUsers < ActiveRecord::Migration[5.0]
     t.string :chapter
     t.string :address
     t.string :phoneNumber
+    t.references :event, index: true, foreign_key: true
   end
   end
 end
