@@ -1,7 +1,9 @@
-<h2>All Users</h2>
-<h4><%= link_to "Register", new_user_path %></h4>
+<h2>Attendences <%= link_to "(+)", new_event_attendence_path(@event) %></h2>
+
 <ul>
-  <% @users.each do |user| %>
-  <li><%= link_to user.fullName, user %></li>
+  <% @attendences.each do |attendence| %>
+    <li>
+      <%= link_to "#{attendence.fullName} - #{attendence.event.location}", event_attedence_path(@event, attendence) %>
+    </li>
   <% end %>
 </ul>

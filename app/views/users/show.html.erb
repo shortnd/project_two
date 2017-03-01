@@ -1,7 +1,5 @@
-<h2><%= @user.fullName %> <%= link_to("(edit)", edit_user_path(@user)) %></h2>
+<h2><%= @attendence.fullName %> <%= link_to "(edit)", edit_event_attendence_path(@attendence.event, @attendence) %></h2>
 
 <h4>Email: <%= @user.email %></h4>
 <h4>Chapter #:<%= @user.chapter %></h4>
 <h4>Phone Number<%= @user.phoneNumber %></h4>
-
-<h6><%= link_to "Back to Attendence", users_path %></h6>

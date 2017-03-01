@@ -1,5 +1,6 @@
-<h2><%= @event.season %> <%= link_to("(edit)", edit_event_path(@event)) %></h2>
-<h3><%= link_to "View Attendence", users_path %></h3>
+<h2><%= @event.season %> <%= link_to "(edit)", edit_event_path(@event) %></h2>
+
+<h3><%#= link_to "View Attendence", event_users_path(@event) %></h3>
 <h4>Location: <%= @event.location %></h4>
 <h4>Date :<%= @event.date %></h4>
 <h2><%= @event.about %></h2>
