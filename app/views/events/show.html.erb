@@ -1,12 +1,19 @@
-<h2><%= @event.season %> <%= link_to "(edit)", edit_event_path(@event) %></h2>
-
-<h3><%#= link_to "View Attendence", event_users_path(@event) %></h3>
+<h2><%= @event.season %></h2>
 <h4>Location: <%= @event.location %></h4>
 <h4>Date :<%= @event.date %></h4>
-<h2><%= @event.about %></h2>
+<h3>About Event</h3>
+<p><%= @event.about %></p>
 <h3>Friday Night</h3>
-<p><%= @event.nightOneEvents %></p>
+<p><%= @event.night_one_events %></p>
 <h3>Saturday Morning</h3>
-<p><%= @event.dayTwoEvents %></p>
+<p><%= @event.day_two_events %></p>
 <h3>Saturday Night</h3>
-<p><%= @event.nightTwoEvents %></p>
+<p><%= @event.night_two_events %></p>
+<h3>Attendance</h3>
+<% @event.attendences.each do |attendence| %>
+<div class="attendences">
+  <li>
+    <%= link_to attendence.fullName, attendence_path(attendence) %>
+  </li>
+</div>
+<% end %>

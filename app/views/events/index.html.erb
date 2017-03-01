@@ -1,9 +1,9 @@
-<h2>Events <%= link_to "(+)", new_event_path %></h2>
+<h2>Events</h2>
 
 <ul>
   <% @events.each do |event| %>
     <li>
-      <%= link_to event.location, event %>
+      <%= link_to event.season, event %>
     </li>
   <% end %>
 </ul>

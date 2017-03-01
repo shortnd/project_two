@@ -1,26 +1,25 @@
 class AttendencesController < ApplicationController
   # index
   def index
-      @event = Event.find(params[:event_id])
-      @attendences = @event.attendences
+      @attendences = Attendence.all
   end
 
-  def all_attendences
-    @attendence = Attendence.all
-  end
+  # def all_attendences
+  #   @attendence = Attendence.all
+  # end
 
   # new
   def new
-    @event = Event.find(params[:event_id])
-    @attendence = @event.attendences.build
+    @attendence = Attendence.new
+    @event_season = Event.all.map { |event| event.season }
   end
 
   # create
   def create
-    @event = Event.find(params[:event_id])
-    @attendence = @event.attendences.create!(attendence_params)
-
-    redirect_to event_path(@event)
+    @attendence = Attendence.new(attendence_params)
+    @attendence.event = Event.find_by(season: params[:attendence][:event])
+    @attendence.save
+    redirect_to attendence_path(@attendence)
   end
 
   #show
@@ -38,14 +37,13 @@ class AttendencesController < ApplicationController
     @attendence = Attendence.find(params[:id])
     @attendence.update(attendence_params)
 
-    redirect_to event_attendence_path(@attendence.event, @attendence)
+    redirect_to attendence_path
   end
 
   # destroy
   def destroy
     @attendence = Attendence.find(params[:id])
     @attendence.destroy
-
     redirect_to attendences_path
   end
 

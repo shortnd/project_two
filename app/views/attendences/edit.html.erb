@@ -1,5 +1,5 @@
 <h2>Edit Your Account</h2>
-<%= form_for [@attendence.event, @attendence] do |f| %>
+<%= form_for @attendence do |f| %>
   <%= f.label :fullName %>
   <%= f.text_field :fullName %>
 
@@ -18,9 +18,11 @@
   <%= f.label :phone %>
   <%= f.text_field :phoneNumber %>
 
+  <%#= f.select(:event, options_for_select(@event_season)) %>
+
   <%= f.submit "Submit" %>
 <% end %>
 
-<%= form_for [@attendence.event, @attendence], method: :delete do |f| %>
-  <%= f.submit "Delete!", class: "delete" %>
-<% end %>
+<%#= form_for @attendence, method: :delete do |f| %>
+  <%#= f.submit "Delete!", class: "delete" %>
+<%# end %>

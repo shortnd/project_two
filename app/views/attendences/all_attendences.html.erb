@@ -1,5 +1,5 @@
 <div class="attendences">
-  <% @attendence.each do |attendence| %>
+  <% @attendences.each do |attendence| %>
     <%= link_to attendence.fullName, event_attendences_path(attendence.event, attendence) %>
   <% end %>
 </div>

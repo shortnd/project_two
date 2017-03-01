@@ -1,9 +1,9 @@
-<h2>Attendences <%= link_to "(+)", new_event_attendence_path(@event) %></h2>
+<h2>Attendences <%= link_to "(+)", new_attendence_path(@event) %></h2>
 
 <ul>
   <% @attendences.each do |attendence| %>
     <li>
-      <%= link_to "#{attendence.fullName} - #{attendence.event.location}", event_attedence_path(@event, attendence) %>
+      <%= link_to attendence.fullName, attendence_path(attendence) %> - <%= Event.find(attendence.event_id).season %>
     </li>
   <% end %>
 </ul>

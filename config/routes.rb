@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   root to: "abouts#index"
 
   resources :abouts
-  resources :events do
+  resources :events
     resources :attendences
-  end
 
-get "/attendences", to: "attendences#all_attendences"
+
+
+#get "/attendences", to: "attendences#all_attendences"
 
 
 end

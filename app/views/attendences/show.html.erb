@@ -1,5 +1,10 @@
-<h2><%= @attendence.fullName %> <%= link_to "(edit)", edit_event_attendence_path(@attendence.event, @attendence) %></h2>
+<h2><%= @attendence.fullName %></h2>
+<h4>Email: <%= @attendence.email %></h4>
+<h4>Chapter #:<%= @attendence.chapter %></h4>
+<h4>Phone Number<%= @attendence.phoneNumber %></h4>
+<h4>Registered For: <%= Event.find(@attendence.event_id).season %></h4>
 
-<h4>Email: <%= @user.email %></h4>
-<h4>Chapter #:<%= @user.chapter %></h4>
-<h4>Phone Number<%= @user.phoneNumber %></h4>
+<div class="">
+  <%= link_to "Edit", edit_attendence_path(@attendence.event, @attendence) %>
+  <%= link_to "Delete", attendence_path(@attendence), method: :delete %>
+</div>

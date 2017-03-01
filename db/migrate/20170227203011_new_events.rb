@@ -5,9 +5,9 @@ class NewEvents < ActiveRecord::Migration[5.0]
     t.string :location
     t.string :date
     t.string :about
-    t.string :nightOneEvents
-    t.string :dayTwoEvents
-    t.string :nightTwoEvents
+    t.string :night_one_events
+    t.string :day_two_events
+    t.string :night_two_events
   end
   end
 end

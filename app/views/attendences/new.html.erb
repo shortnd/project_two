@@ -17,5 +17,7 @@
   <%= f.label :phone %>
   <%= f.text_field :phoneNumber %>
 
+  <%= f.select(:event, options_for_select(@event_season)) %>
+
   <%= f.submit "Submit" %>
 <% end %>

@@ -4,15 +4,14 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
-  # new
   def new
     @event = Event.new
   end
 
   # create
   def create
-    @event = Event.create!(event_params)
-
+    @event = Event.create(event_params)
+    @event.save
     redirect_to event_path(@event)
   end
 
