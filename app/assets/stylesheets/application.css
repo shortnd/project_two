@@ -22,9 +22,14 @@
 }
 
 .container {
+    height: 100vh;
     width: 900px;
     margin: 0 auto;
     background: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
 }
 
 header {
@@ -57,5 +62,11 @@ header nav a:hover {
 }
 
 main h2 {
-  text-align: center;
+  text-align: center
+}
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
 }

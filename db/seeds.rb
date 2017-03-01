@@ -58,3 +58,11 @@ password: "abcd1234",
 chapter: "23",
 address: "123 Main St.",
 phoneNumber: "1234512634", event: spring2017)
+
+Attendee.create(full_name: "Collin",
+email: "c@c.com",
+password: "1234",
+chapter: "1",
+address: "Somewhere",
+phoneNumber: "123456123",
+event: spring2017)

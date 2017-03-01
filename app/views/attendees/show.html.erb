@@ -5,8 +5,6 @@
 <h4>Registered For: <%= Event.find(@attendee.event_id).season %></h4>
 
 <div class="">
-  <%= link_to "Edit", edit_attendee_path(@attendee.event, @attendee) %>
+  <%= link_to "Edit", edit_attendee_path(@attendee[:id]) %>
   <%= link_to "Delete", attendee_path(@attendee), method: :delete %>
 </div>
-
-<h6><%= link_to "Return to Main Page", abouts_path %></h6>

@@ -4,9 +4,15 @@ class AttendeesController < ApplicationController
       @attendees = Attendee.all
   end
 
-  # def all_attendees
-  #   @attendee = Attendee.all
-  # end
+  #show
+  def show
+    @attendee = Attendee.find(params[:id])
+  end
+
+  # edit
+  def edit
+    @attendee = Attendee.find(params[:id])
+  end
 
   # new
   def new
@@ -20,16 +26,6 @@ class AttendeesController < ApplicationController
     @attendee.event = Event.find_by(season: params[:attendee][:event])
     @attendee.save
     redirect_to attendee_path(@attendee)
-  end
-
-  #show
-  def show
-    @attendee = Attendee.find(params[:id])
-  end
-
-  # edit
-  def edit
-    @attendee = Attendee.find(params[:id])
   end
 
   # update
