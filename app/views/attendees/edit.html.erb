@@ -1,7 +1,7 @@
 <h2>Edit Your Account</h2>
-<%= form_for @attendence do |f| %>
-  <%= f.label :fullName %>
-  <%= f.text_field :fullName %>
+<%= form_for @attendee do |f| %>
+  <%= f.label :full_name %>
+  <%= f.text_field :full_name %>
 
   <%= f.label :email %>
   <%= f.text_field :email %>
@@ -26,3 +26,5 @@
 <%#= form_for @attendence, method: :delete do |f| %>
   <%#= f.submit "Delete!", class: "delete" %>
 <%# end %>
+
+<h6><%= link_to "Return to Main Page", abouts_path %></h6>

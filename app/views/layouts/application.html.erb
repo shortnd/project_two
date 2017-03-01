@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>LPA District 5</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <h1>LPA District 5</h1>
-  <nav>
-    <%= link_to "Events", events_path %>
-    <%= link_to "Attendences", attendences_path %>
-  </nav>
+    <head>
+        <title>LPA District 5</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div class="container">
+            <header>
 
-<%= yield %>
+                <h1>LPA District 5<%#= link_to "LPA District 5", abouts_path %></h1>
+                <nav>
+                    <%= link_to "Regionals", events_path %>
+                    <%= link_to "Attendees", attendees_path %>
+                </nav>
+            </header>
+            <main>
 
-</body>
+                <%= yield %>
+            </main>
+        </div>
+    </body>
 </html>

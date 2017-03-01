@@ -1,0 +1,12 @@
+<h2>Attendees</h2>
+<h5><%= link_to "Register for Regional", new_attendee_path(@event) %></h5>
+
+<ul>
+  <% @attendees.each do |attendee| %>
+    <li>
+      <%= link_to attendee.full_name, attendee_path(attendee) %> - <%= Event.find(attendee.event_id).season %>
+    </li>
+  <% end %>
+</ul>
+
+<h6><%= link_to "Return to Main Page", abouts_path %></h6>

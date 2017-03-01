@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :abouts
   resources :events
-    resources :attendences
+    resources :attendees
 
 
 

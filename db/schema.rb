@@ -15,15 +15,15 @@ ActiveRecord::Schema.define(version: 20170301004059) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "attendences", force: :cascade do |t|
-    t.string  "fullName"
+  create_table "attendees", force: :cascade do |t|
+    t.string  "full_name"
     t.string  "email"
     t.string  "password",    null: false
     t.string  "chapter"
     t.string  "address"
     t.string  "phoneNumber"
     t.integer "event_id"
-    t.index ["event_id"], name: "index_attendences_on_event_id", using: :btree
+    t.index ["event_id"], name: "index_attendees_on_event_id", using: :btree
   end
 
   create_table "events", force: :cascade do |t|
@@ -36,5 +36,5 @@ ActiveRecord::Schema.define(version: 20170301004059) do
     t.string "night_two_events"
   end
 
-  add_foreign_key "attendences", "events"
+  add_foreign_key "attendees", "events"
 end

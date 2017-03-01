@@ -10,10 +10,12 @@
 <h3>Saturday Night</h3>
 <p><%= @event.night_two_events %></p>
 <h3>Attendance</h3>
-<% @event.attendences.each do |attendence| %>
-<div class="attendences">
+<% @event.attendees.each do |attendee| %>
+<div class="attendees">
   <li>
-    <%= link_to attendence.fullName, attendence_path(attendence) %>
+    <%= link_to attendee.full_name, attendee_path(attendee) %>
   </li>
 </div>
 <% end %>
+
+<h6><%= link_to "Return to Main Page", abouts_path %></h6>

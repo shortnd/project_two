@@ -1,3 +1,3 @@
 class Event < ActiveRecord::Base
-  has_many :attendences, dependent: :destroy
+  has_many :attendees, dependent: :destroy
 end
