@@ -52,7 +52,7 @@ night_two_events: 'Buffet Banquet with some EXCITING Special "HERO" Guest / Phot
 season: "Spring 2017")
 fall2017 = Event.create(location: "TBA", date: "TBA", season: "Fall 2017")
 
-Attendee.create(full_name: "Dee Dee Allemon",
+Attendee.create(full_name: "Dee",
 email: "d@gmail.com",
 password: "abcd1234",
 chapter: "23",
@@ -66,3 +66,11 @@ chapter: "1",
 address: "Somewhere",
 phoneNumber: "123456123",
 event: spring2017)
+
+Attendee.create(full_name: "John",
+email: "j@j.com",
+password: "1431",
+chapter: "66",
+address: "Somewhere",
+phoneNumber: "12345613",
+event: fall2017)
