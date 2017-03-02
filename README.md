@@ -28,6 +28,6 @@ As an Admin I should be able to Edit and Delete Registration submissions after I
 As a User I should only be able to view my Registration and no one else's as they shouldn't be able to see mine either
 
 
-### ERD
+#### ERD
 
 https://drive.google.com/file/d/0B-7RGShgs8-kZTVGQkFxa1lMNjA/view?usp=sharing
