@@ -100,7 +100,7 @@ footer a {
 footer h6 {
   padding: 10px;
 }
-.attendees {
+.attendees ul {
   list-style: none;
 }
 .event {

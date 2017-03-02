@@ -14,9 +14,11 @@
 </div>
 <% @event.attendees.each do |attendee| %>
 <div class="attendees attendance">
-  <li>
+  <ul>
+    <li>
     <%= link_to attendee.full_name, attendee_path(attendee) %>
   </li>
+</ul>
 </div>
 
 
