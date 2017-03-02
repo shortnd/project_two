@@ -1,3 +1,18 @@
+## Technologies Used
+The technologies used in this project was Ruby on the Rails, and has some HTML and CSS. All testing was done on Google Chrome.
+
+## Approach Taken
+My approach taken for this app was to make a app where a user could register for an upcoming event and view the event information. They could also delete and edit if they choose not to go the the event.
+
+
+## Installation instructions
+
+##### Required Software
+Google Chrome, Ruby, Bundle, and Ruby on Rails
+
+## Downloading
+If you download the repository to run the app locally you will have to have ruby, bundle and ruby on rails installed in order to run the app.
+
 ## User Stores
 
 As a user I should be able to register for upcoming regional(event)
@@ -16,29 +31,3 @@ As a User I should only be able to view my Registration and no one else's as the
 ## ERD
 
 https://drive.google.com/file/d/0B-7RGShgs8-kZTVGQkFxa1lMNjA/view?usp=sharing
-
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
