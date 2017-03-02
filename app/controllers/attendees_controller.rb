@@ -1,4 +1,6 @@
 class AttendeesController < ApplicationController
+  before_action :authenticate_user!
+
   # index
   def index
       @attendees = Attendee.all
@@ -12,6 +14,12 @@ class AttendeesController < ApplicationController
   # edit
   def edit
     @attendee = Attendee.find(params[:id])
+    if @attendee.user == current_user
+      #empty it works
+    else
+      redirect_to attendee_path
+      flash[:alert] = "Only the Attendee can Edit"
+    end
   end
 
   # new
@@ -22,7 +30,7 @@ class AttendeesController < ApplicationController
 
   # create
   def create
-    @attendee = Attendee.new(attendee_params)
+    @attendee = Attendee.new(attendee_params.merge(user: current_user))
     @attendee.event = Event.find_by(season: params[:attendee][:event])
     @attendee.save
     redirect_to attendee_path(@attendee)
@@ -39,7 +47,11 @@ class AttendeesController < ApplicationController
   # destroy
   def destroy
     @attendee = Attendee.find(params[:id])
+    if @attendee.user == current_user
     @attendee.destroy
+  else
+    flash[:alert] = "Only the Attendee can delete"
+  end
     redirect_to attendees_path
   end
 

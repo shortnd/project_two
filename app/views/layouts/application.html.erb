@@ -8,9 +8,30 @@
     </head>
     <body>
         <div class="container">
-            <header>
 
+            <header>
+              <ul>
+                <% if user_signed_in? %>
+        <li id="fat-menu" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Account <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Profile", edit_user_registration_path %></li>
+            <li><%= link_to "Settings", '#' %></li>
+            <li class="divider"></li>
+            <li>
+              <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+            </li>
+          </ul>
+        </li>
+      <% else %>
+        <li><%= link_to "Sign in", new_user_session_path %></li>
+      <% end %>
+              </ul>
                 <h1>LPA District 5<%#= link_to "LPA District 5", abouts_path %></h1>
+                <h4 class="notice"><%= notice %></h4>
+                <h4 class="alert"><%= alert %></h4>
                 <nav>
                     <%= link_to "Regionals", events_path %>
                     <%= link_to "Attendees", attendees_path %>
@@ -19,8 +40,8 @@
             <main>
 
                 <%= yield %>
-            </main>
 
+            </main>
         <footer>
           <h6><%= link_to "Return to Main Page", abouts_path %></h6>
         </footer>
