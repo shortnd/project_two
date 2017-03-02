@@ -1,9 +1,12 @@
-<h2>Name: <%= @attendee.full_name %></h2>
+<div class="attendees_info">
+
+
+<h2><%= @attendee.full_name %></h2>
 <h4>Email: <%= @attendee.email %></h4>
 <h4>Chapter #:<%= @attendee.chapter %></h4>
 <h4>Phone Number: <%= @attendee.phoneNumber %></h4>
 <h4>Registered For: <%= Event.find(@attendee.event_id).season %></h4>
-
+</div>
 <div class="">
   <%= link_to "Edit", edit_attendee_path(@attendee[:id]) %>
   <%= link_to "Delete", attendee_path(@attendee), method: :delete %>

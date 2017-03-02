@@ -1,6 +1,6 @@
 <h2>Attendees</h2>
-<h5><%= link_to "Register for Regional", new_attendee_path(@event) %></h5>
-
+<h5 class="register"><%= link_to "Register for Regional", new_attendee_path(@event) %></h5>
+<div class="rendered">
 <ul>
   <% @attendees.each do |attendee| %>
     <li>
@@ -8,5 +8,4 @@
     </li>
   <% end %>
 </ul>
-
-<h6><%= link_to "Return to Main Page", abouts_path %></h6>
+</div>

@@ -1,21 +1,23 @@
-<h2><%= @event.season %></h2>
-<h4>Location: <%= @event.location %></h4>
-<h4>Date :<%= @event.date %></h4>
-<h3>About Event</h3>
-<p><%= @event.about %></p>
-<h3>Friday Night</h3>
-<p><%= @event.night_one_events %></p>
-<h3>Saturday Morning</h3>
-<p><%= @event.day_two_events %></p>
-<h3>Saturday Night</h3>
-<p><%= @event.night_two_events %></p>
-<h3>Attendance</h3>
+<h2 class="season"><%= @event.season %></h2>
+<div class="rendered">
+<h4 class="event location">Location: <%= @event.location %></h4>
+<h4 class="event date">Date: <%= @event.date %></h4>
+<h3 class="event about">About Event</h3>
+<p class="event about"><%= @event.about %></p>
+<h3 class="event fridayNight">Friday Night</h3>
+<p class="event fridayNight"><%= @event.night_one_events %></p>
+<h3 class="event saturdayMorning">Saturday Morning</h3>
+<p class="event saturdayMorning"><%= @event.day_two_events %></p>
+<h3 class="event saturdayNight">Saturday Night</h3>
+<p class="event saturdayNight"><%= @event.night_two_events %></p>
+<h3 class="event attendance">Attendance</h3>
+</div>
 <% @event.attendees.each do |attendee| %>
-<div class="attendees">
+<div class="attendees attendance">
   <li>
     <%= link_to attendee.full_name, attendee_path(attendee) %>
   </li>
 </div>
-<% end %>
 
-<h6><%= link_to "Return to Main Page", abouts_path %></h6>
+
+<% end %>

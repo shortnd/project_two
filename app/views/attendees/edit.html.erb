@@ -2,29 +2,27 @@
 <%= form_for @attendee do |f| %>
   <%= f.label :full_name %>
   <%= f.text_field :full_name %>
-
+<br>
   <%= f.label :email %>
   <%= f.text_field :email %>
-
+<br>
   <%= f.label :password %>
   <%= f.password_field :password %>
-
+<br>
   <%= f.label :chapter %>
   <%= f.text_field :chapter %>
-
+<br>
   <%= f.label :address %>
   <%= f.text_field :address %>
-
+<br>
   <%= f.label :phone %>
   <%= f.text_field :phoneNumber %>
 
   <%#= f.select(:event, options_for_select(@event_season)) %>
-
+<br>
   <%= f.submit "Submit" %>
 <% end %>
 
 <%#= form_for @attendence, method: :delete do |f| %>
   <%#= f.submit "Delete!", class: "delete" %>
 <%# end %>
-
-<h6><%= link_to "Return to Main Page", abouts_path %></h6>

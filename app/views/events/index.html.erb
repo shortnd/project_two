@@ -1,11 +1,9 @@
-<h2>Upcoming Regionals</h2>
+<h2 class="upcoming">Upcoming Regionals</h2>
 
-<ul>
+<ul  class = "all_events">
   <% @events.each do |event| %>
     <li>
       <%= link_to event.season, event %>
     </li>
   <% end %>
 </ul>
-
-<h6><%= link_to "Return to Main Page", abouts_path %></h6>

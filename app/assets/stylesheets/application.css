@@ -23,8 +23,8 @@
 
 .container {
     height: 100vh;
-    width: 900px;
-    margin: 0 auto;
+    /*width: 900px;*/
+    /*margin: 0 auto;*/
     background: lightgrey;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@
     align-content: space-between;
 }
 
-header {
+header, footer {
     text-align: center;
     background: darkgrey;
 }
@@ -47,9 +47,10 @@ header nav {
     display: flex;
     justify-content: space-around;
     font-size: 1.5em;
-    margin: 10px;
+    margin: 10px 0;
     padding: 20px;
     text-decoration: none;
+    border-top: 3px solid black;
 }
 
 header nav a {
@@ -62,11 +63,104 @@ header nav a:hover {
 }
 
 main h2 {
-  text-align: center
+  text-align: center;
+  padding: 15px;
+  border-top: 3px solid black;
 }
 main {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-content: space-between;
+}
+.upcoming {
+  font-size: 3em;
+}
+.all_events {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 20% 0;
+}
+.all_events a {
+  /*text-decoration: none;*/
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+}
+.rendered {
+  margin: 10px;
+  padding: 5px;
+}
+footer a {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+}
+footer h6 {
+  padding: 10px;
+}
+.attendees {
+  list-style: none;
+}
+.event {
+  margin-left: 10%;
+}
+.location, .date, .about, .fridayNight, .saturdayMorning, .saturdayNight, .attendance {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.location {
+  font-size: 25px;
+}
+.about {
+  font-size: 36px;
+}
+.fridayNight, .saturdayMorning, .saturdayNight {
+  padding: 5px;
+}
+.attendees {
+  margin: 0 20%;
+  padding: 2px;
+}
+.attendees a {
+  text-decoration: none;
+  color: black;
+}
+.attendees a:hover {
+  color: white;
+  font-size: 1.5em;
+}
+.attendees_info h4 {
+  margin-left: 10%;
+  margin: 10px;
+}
+.edit_attendee {
+  margin: 10px;
+  padding: 15px;
+}
+label {
+  padding: 10px;
+  margin: 15px 5px;
+}
+input {
+  margin: 10px;
+  font-size: 16px;
+}
+.register {
+  text-align: center;
+  font-size: 1.25em;
+}
+.rendered li {
+  list-style: none;
+  margin-left: 20%;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 15px 0;
+}
+.rendered li a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  padding: 10px;
 }
